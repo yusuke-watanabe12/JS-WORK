@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <title>03 | 1-jQuery</title>
+    <link rel="stylesheet" href="../00-tools/css/reset.css" />
+    <link rel="stylesheet" href="../00-tools/css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <p class="modal-show">CLICK!!</p>
+      <div class="modal" id="modal" style="display: none">
+        <div class="modal-content">
+          <div class="modal-text">MODAL WINDOW</div>
+          <button type="button" class="modal-close" id="modal-close">x</button>
+        </div>
+      </div>
+    </div>
+    <script defer>
+      /* 今回やるのはモーダルです。
+       * .modal-show をクリックすることで .modal を表示させる
+       * .modal-close をクリックで .modal の表示を解除する
+       *
+       *
+       */
+
+      // モーダル要素を取得
+      const modal = document.querySelector(".modal");
+      // モーダル表示用のボタンを取得
+      const modalShow = document.querySelector(".modal-show");
+      // モーダル非表示用のボタンを取得
+      const modalClose = document.querySelector(".modal-close");
+
+      // モーダル表示用のボタンにクリックイベントを追加
+      modalShow.addEventListener("click", function () {
+        modal.style.display = "block";
+      });
+
+      // モーダル非表示用のボタンにクリックイベントを追加
+      modalClose.addEventListener("click", function () {
+        modal.style.display = "none";
+      });
+    </script>
+  </body>
+</html>

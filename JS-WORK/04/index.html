@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <title>04 | 1-jQuery</title>
+    <link rel="stylesheet" href="../../00-tools/css/reset.css" />
+    <link rel="stylesheet" href="../../00-tools/css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper"></div>
+    <script defer>
+      /*
+       * 今回やるのはFizzBuzzです。
+       *
+       * 以下の要件に従ってプログラムを作りましょう
+       *
+       * 1~100の数字で
+       * ① 3の倍数の場合、Fizzと表示
+       * ② 5の倍数の場合、Buzzと表示
+       * ③ 3の倍数かつ5の倍数の場合、FizzBuzzと表示
+       * ④ それ以外の場合、数字を表示
+       *
+       * ブラウザ画面に出力して下さい
+       * FizzBuzz.pngが結果のイメージです
+       */
+
+      //1~100の数字
+      for (i = 1; i <= 100; i++) {
+        //③３の倍数かつ５の倍数の場合、FizzBuzz表示
+        if (i % 3 == 0 && i % 5 == 0) {
+          document.write("FizzBuzz<br>");
+
+          //①3の倍数の場合、Fizz表示
+        } else if (i % 3 == 0) {
+          document.write("Fizz<br>");
+
+          //②5の倍数の場合、Buzz表示
+        } else if (i % 5 == 0) {
+          document.write("Buzz<br>");
+
+          //④それ以外は数字
+        } else {
+          document.write(i + "<br>");
+        }
+      }
+    </script>
+  </body>
+</html>
